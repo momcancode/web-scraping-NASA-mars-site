@@ -38,16 +38,6 @@ Complete the following scrapes using Jupyter Notebook, BeautifulSoup, Pandas, an
 
 * Use Bootstrap to structure the HTML template.
 
-![final_app_part1](Missions_to_Mars/screenshots/screenshot_1.png)
-
-- - -
-
-![final_app_part2](Missions_to_Mars/screenshots/screenshot_2.png)
-
-- - -
-
-![final_app_part3](Missions_to_Mars/screenshots/screenshot_3.png)
-
 - - -
 
 ## Step 3 - Where to find the files
