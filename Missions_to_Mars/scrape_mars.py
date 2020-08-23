@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def init_browser():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    return Browser("chrome", **executable_path, headless=False)
 
 def scrape():
     browser = init_browser()
@@ -81,7 +81,7 @@ def scrape():
     df.set_index("Description", inplace=True)
 
     # Use Pandas to convert the data to a HTML table string
-    html_table = df.to_html()
+    html_table = df.to_html().split('class="dataframe">')[1]
 
 
     ## Mars Hemispheres
@@ -111,7 +111,7 @@ def scrape():
         title = text.get_text().split("Enhanced")[0]
         
         # Retrieve the image url string for the full resolution hemisphere image
-        img_url = soup.select_one("dd a")["href"]
+        img_url = soup.select_one("li a")["href"]
         
         # Append the dictionary with the image url string and the hemisphere title to a list
         hemisphere_image_urls.append({
@@ -131,7 +131,7 @@ def scrape():
         "hemisphere_image_urls": hemisphere_image_urls
     }
 
-    # Quite the browser after scraping
+    # Quit the browser after scraping
     browser.quit()
 
     # Return results
