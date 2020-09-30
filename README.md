@@ -50,7 +50,7 @@ Complete the following scrapes using Jupyter Notebook, BeautifulSoup, Pandas, an
 
 4. [Jinja template](Missions_to_Mars/templates/index.html).
 
+---
+Contact:
 
-### Copyright of the challenge
-
-Trilogy Education Services © 2020. All Rights Reserved.
+Email: thao.ph.ha@gmail.com
